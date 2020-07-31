@@ -1,5 +1,5 @@
 # Overwiew
-
+This is a fork from mihalea's i3expo, but with a blurred transparent background.
 i3expo is an simple and straightforward way to get a visual impression of all your
 current virtual desktops that many compositing window managers use. It's not a
 very powerful approach, but a very intuitive one and especially fits workflows
