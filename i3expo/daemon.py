@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from xdg.BaseDirectory import xdg_config_home
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 from threading import Thread
 from i3expo.debounce import Debounce
 from i3expo.geometry import Geometry, Dimension
