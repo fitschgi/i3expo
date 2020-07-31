@@ -290,7 +290,7 @@ def show_ui(source):
         raw_img = grab_screen()
         backG = Image.frombuffer('RGB', (raw_img[0], raw_img[1]), raw_img[2], 'raw', 'RGB', 0, 1).filter(ImageFilter.GaussianBlur(radius=6))
         backG = pygame.image.fromstring(backG.tobytes(), backG.size, backG.mode)
-        screen.blit(backG, window_width, window_height)
+        screen.blit(backG, (0,0))
         draw_tiles(screen, tiles, geometry)
 
         pygame.display.flip()
