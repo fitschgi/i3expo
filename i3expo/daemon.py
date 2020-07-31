@@ -472,7 +472,7 @@ def draw_tiles(screen, tiles, g):
     highlight_percentage = config.getint('UI', 'highlight_percentage')
     bgcolor = config.getcolor('UI', 'bgcolor')
 
-    screen.fill(bgcolor)
+    
 
     for idx, t in enumerate(tiles):
         x = math.floor(idx % g.grid.x)
