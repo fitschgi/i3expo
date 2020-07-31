@@ -27,18 +27,18 @@ This is based on the work of [David Reis](https://gitlab.com/d.reis) and [Laur A
 Clone, build and install
 
 ```
-git clone https://github.com/fitschgi/i3expoTransparent
-cd i3expoTransparent
+git clone https://github.com/fitschgi/i3expo
+cd i3expo
 python setup.py install
 ```
 
-Compile `prtscn.c` and copy files to `/usr/share/i3expoTransparent`:
+Compile `prtscn.c` and copy files to `/usr/share/i3expo`:
 
 ```
 gcc -shared -O3 -Wall -fPIC -Wl,-soname,prtscn -o prtscn.so prtscn.c -lX11
 mkdir /usr/share/i3expo
-cp defaultconfig /usr/share/i3expoTransparent/defaultconfig
-cp prtscn.so /usr/share/i3expoTransparent/prtscn.so
+cp defaultconfig /usr/share/i3expo/defaultconfig
+cp prtscn.so /usr/share/i3expo/prtscn.so
 ```
 
 ## Dependencies
@@ -57,10 +57,10 @@ The following Python packages are required to run this application:
 
 ```
 // Start the daemon
-$ i3expoTransparent-daemon
+$ i3expo-daemon
 
 // Show the UI
-$ i3expoTransparent -s
+$ i3expo -s
 ```
 
 ## Configuration
@@ -73,7 +73,7 @@ Colors can be specified by using their PyGame names or in #fff or #ffffff hex.
 ### Daemon: `i3expod`
 
 ```
-usage: i3expoTransparent-daemon [-h] [-v] [-i INTERVAL] [-d] [-t]
+usage: i3expo-daemon [-h] [-v] [-i INTERVAL] [-d] [-t]
 
 Display an overview of all open workspaces
 
@@ -88,7 +88,7 @@ optional arguments:
 ### Client: `i3expo`
 
 ```
-usage: i3expoTransparent [-h] [-u] [-s]
+usage: i3expo [-h] [-u] [-s]
 
 Interact with the i3expo daemon
 
