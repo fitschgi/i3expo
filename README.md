@@ -18,36 +18,27 @@ can select another with the mouse or keyboard.
 
 This is based on the work of [David Reis](https://gitlab.com/d.reis) and [Laur Aliste](https://gitlab.com/laur891).
 
-Example output:
-![Sample](img/ui.png)
-
 # Installation
 
-## Instructions for Arch Linux:
 
-An installation package is available in the AUR as [i3expo](https://aur.archlinux.org/packages/i3expo), which can be installed with your favourite helper
-
-```
-yay -S i3expo
-```
 
 ## Manual installation
 
 Clone, build and install
 
 ```
-git clone https://github.com/mihalea/i3expo
-cd i3expo
+git clone https://github.com/fitschgi/i3expoTransparent
+cd i3expoTransparent
 python setup.py install
 ```
 
-Compile `prtscn.c` and copy files to `/usr/share/i3expo`:
+Compile `prtscn.c` and copy files to `/usr/share/i3expoTransparent`:
 
 ```
 gcc -shared -O3 -Wall -fPIC -Wl,-soname,prtscn -o prtscn.so prtscn.c -lX11
 mkdir /usr/share/i3expo
-cp defaultconfig /usr/share/i3expo/defaultconfig
-cp prtscn.so /usr/share/i3expo/prtscn.so
+cp defaultconfig /usr/share/i3expoTransparent/defaultconfig
+cp prtscn.so /usr/share/i3expoTransparent/prtscn.so
 ```
 
 ## Dependencies
@@ -66,10 +57,10 @@ The following Python packages are required to run this application:
 
 ```
 // Start the daemon
-$ i3expo-daemon
+$ i3expoTransparent-daemon
 
 // Show the UI
-$ i3expo -s
+$ i3expoTransparent -s
 ```
 
 ## Configuration
@@ -82,7 +73,7 @@ Colors can be specified by using their PyGame names or in #fff or #ffffff hex.
 ### Daemon: `i3expod`
 
 ```
-usage: i3expo-daemon [-h] [-v] [-i INTERVAL] [-d] [-t]
+usage: i3expoTransparent-daemon [-h] [-v] [-i INTERVAL] [-d] [-t]
 
 Display an overview of all open workspaces
 
@@ -97,7 +88,7 @@ optional arguments:
 ### Client: `i3expo`
 
 ```
-usage: i3expo [-h] [-u] [-s]
+usage: i3expoTransparent [-h] [-u] [-s]
 
 Interact with the i3expo daemon
 
