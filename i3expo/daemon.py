@@ -27,7 +27,7 @@ global_knowledge = {'active': -1}
 
 i3 = i3ipc.Connection()
 
-screenshot_lib = '/usr/share/i3expo/prtscn.so'
+screenshot_lib = '/usr/share/i3expoTransparent/prtscn.so'
 grab = ctypes.CDLL(screenshot_lib)
 
 parser = argparse.ArgumentParser(
